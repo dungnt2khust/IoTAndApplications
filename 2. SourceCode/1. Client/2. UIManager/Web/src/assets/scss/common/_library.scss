@@ -1,0 +1,227 @@
+// Flex
+.fx-row {
+    display: flex;
+    flex-direction: row;
+}
+.aln-i-center {
+    align-items: center;
+}
+.jus-c-center {
+    justify-content: center;
+}
+.jus-c-sbtn {
+    justify-content: space-between;
+}
+.fx-s-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fx-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.fx-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex {
+    @for $size from 1 to 10 {
+        .#{'flex-' + $size} {
+            flex: $size;
+        }
+    }
+}
+@include flex;
+
+@mixin fxCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fx-center {
+    @include fxCenter; 
+}
+
+// Position
+.pos-relative {
+    position: relative;
+}
+.pos-sticky {
+    position: sticky;
+}
+.pos-absolute {
+    position: absolute;
+}
+
+// Gutter
+@mixin setGutter () {
+    @for $gut from 2 to 33 {
+        .#{'gut-m-'+ $gut} {
+            margin-left: -$gut + px;
+            margin-right: -$gut + px;
+        }   
+        .#{'gut-p-'+ $gut} {
+            padding-left: $gut + px;
+            padding-right: $gut + px;
+        }   
+    } 
+}
+@include setGutter;
+
+
+// Icons
+@mixin setIcon {
+    @for $size from 4 to 32 {
+        @if $size % 2 == 0 {
+            .#{'mi-' +  $size} {
+                @include fxCenter;
+                width: $size + px;
+                height: $size + px;
+            }
+        } 
+    } 
+}
+@include setIcon;
+
+// Padding
+@mixin setPaddingAll {
+    @for $size from 2 to 50 {
+        .#{'p-' +  $size} {
+            padding: $size + px !important;
+        }
+        .#{'p-h-' + $size} {
+            padding-left: $size + px !important;
+            padding-right: $size + px !important;
+        }
+        .#{'p-v-' + $size} {
+            padding-top: $size + px !important;
+            padding-bottom: $size + px !important;
+        }
+        .#{'p-r-' +  $size} {
+            padding-right: $size + px !important;
+        }
+        .#{'p-l-' +  $size} {
+            padding-left: $size + px !important;
+        }
+        .#{'p-t-' +  $size} {
+            padding-top: $size + px !important;
+        }
+        .#{'p-b-' +  $size} {
+            padding-bottom: $size + px !important;
+        }
+    } 
+}
+@include setPaddingAll;
+
+// Margin 
+@mixin setMarginAll {
+    @for $size from 2 to 50 {
+        .#{'m-' +  $size} {
+            margin: $size + px !important;
+        }
+        .#{'m-h-' + $size} {
+            margin-left: $size + px !important;
+            margin-right: $size + px !important; 
+        }
+        .#{'m-v-' + $size} {
+            margin-top: $size + px !important;
+            margin-bottom: $size + px !important;
+        }
+        .#{'m-r-' +  $size} {
+            margin-right: $size + px !important; 
+        }
+        .#{'m-l-' +  $size} {
+            margin-left: $size + px !important;
+        }
+        .#{'m-t-' +  $size} {
+            margin-top: $size + px !important;
+        }
+        .#{'m-b-' +  $size} {
+            margin-bottom: $size + px !important;
+        } 
+    } 
+}
+@include setMarginAll;
+
+// Rotate
+@mixin setRotateAll {
+    @for $size from 0 to 361 {
+        @if $size % 15 == 0 {
+            .#{'rotate-' +  $size} {
+                transform: rotate($size + deg);
+            }
+            .#{'rotate--' + $size} {
+                transform: rotate(-$size + deg);
+            }
+        } 
+    } 
+}
+@include setRotateAll;
+
+// Transition
+@mixin setTransition($transition_name, $duration) {
+    .#{$transition_name} {
+        transition: all linear;
+        transition-duration: $duration + s;
+    }
+}
+@include setTransition(transition-0\.1, 0.1);
+@include setTransition(transition-0\.2, 0.2);
+@include setTransition(transition-0\.3, 0.3);
+@include setTransition(transition-0\.4, 0.4);
+@include setTransition(transition-0\.5, 0.5);
+
+// ScrollBar
+@mixin SetScrollBar ($className, $width, $bgTrack, $bgThumb, $bgThumbHover, $brTrack, $brThumb, $brThumbHover) {
+    .#{$className} {
+        overflow: auto;
+        /* width */
+        &::-webkit-scrollbar {
+            width: $width + px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: $bgTrack;
+            border-radius: $brTrack + px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $bgThumb;
+            border-radius: $brThumb + px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $bgThumbHover;
+            border-radius: $brThumbHover + px;
+        }        
+    }  
+} 
+// Default ScrollBar
+@include SetScrollBar(defaultScrollbar, 10, #f1f1f1, #888, #555, 4, 4, 0);
+// Hidden scrollbar
+.hidden-scrollbar {
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+// Cursor 
+.cur-n {
+    cursor: none;
+}
+.cur-p {
+    cursor: pointer;
+}
+.cur-t {
+    cursor: text;
+}
+.cur-g {
+    cursor: grab;
+}
