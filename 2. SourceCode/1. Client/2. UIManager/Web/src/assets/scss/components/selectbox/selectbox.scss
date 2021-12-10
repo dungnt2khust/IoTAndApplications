@@ -1,0 +1,20 @@
+.selectbox {
+    .selectbox__curr {
+        font-family: Notosans-Semibold;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid #ccc;
+    }
+    .selectbox__list {
+        list-style: none;
+        border: 1px solid #ccc;
+        .selectbox__item {
+            cursor: pointer;
+            font-family: Notosans-Regular;
+            &:hover, &.selected {
+                background-color: #ccc;
+                color: #fff;
+            }
+        }
+    }
+}

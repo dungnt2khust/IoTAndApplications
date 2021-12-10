@@ -1,0 +1,13 @@
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp2.2\EddieShop.Infrastructure.deps.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp2.2\EddieShop.Infrastructure.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp2.2\EddieShop.Infrastructure.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp2.2\EddieShop.Core.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp2.2\EddieShop.Core.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.csproj.AssemblyReference.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.AssemblyInfoInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.AssemblyInfo.cs
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.csproj.CoreCompileInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.csproj.CopyComplete
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp2.2\EddieShop.Infrastructure.pdb

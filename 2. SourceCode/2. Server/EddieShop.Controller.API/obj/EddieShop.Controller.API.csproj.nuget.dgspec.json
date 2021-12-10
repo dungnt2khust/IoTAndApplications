@@ -1,0 +1,254 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Controller.API\\EddieShop.Controller.API.csproj": {}
+  },
+  "projects": {
+    "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Controller.API\\EddieShop.Controller.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Controller.API\\EddieShop.Controller.API.csproj",
+        "projectName": "EddieShop.Controller.API",
+        "projectPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Controller.API\\EddieShop.Controller.API.csproj",
+        "packagesPath": "C:\\Users\\NGUYEN TIEN DUNG\\.nuget\\packages\\",
+        "outputPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Controller.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\NGUYEN TIEN DUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
+            "projectReferences": {
+              "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj": {
+                "projectPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj"
+              },
+              "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Infrastructure\\EddieShop.Infrastructure.csproj": {
+                "projectPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Infrastructure\\EddieShop.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.3, 3.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj",
+        "projectName": "EddieShop.Core",
+        "projectPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj",
+        "packagesPath": "C:\\Users\\NGUYEN TIEN DUNG\\.nuget\\packages\\",
+        "outputPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\NGUYEN TIEN DUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Infrastructure\\EddieShop.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Infrastructure\\EddieShop.Infrastructure.csproj",
+        "projectName": "EddieShop.Infrastructure",
+        "projectPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Infrastructure\\EddieShop.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\NGUYEN TIEN DUNG\\.nuget\\packages\\",
+        "outputPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\NGUYEN TIEN DUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
+            "projectReferences": {
+              "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj": {
+                "projectPath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[1.3.14, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.listgrid {
+    .listgrid__header {
+
+    }
+    .listgrid__content {
+        .listgrid__list {
+            list-style: none;
+            .listgrid__item {
+                border-bottom: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+                &:first-child {
+                    border-top: 1px solid #ccc;
+                }
+                &:hover {
+                    background-color: #eee;
+                    .listgrid__function {
+                        display: flex;
+                    }
+                }
+                .listgrid__checkbox {
+
+                }
+                .listgrid__function {
+                    display: none;
+                    div {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .listgrid__footer {
+
+    }
+}

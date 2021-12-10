@@ -1,0 +1,57 @@
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.deps.json
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.AssemblyReference.cache
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.Resources.ResourceVN.resources
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.GenerateResource.cache
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfoInputs.cache
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfo.cs
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.CoreCompileInputs.cache
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.dll
+C:\Workspace\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.pdb
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.deps.json
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.AssemblyReference.cache
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.Resources.ResourceVN.resources
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.GenerateResource.cache
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfoInputs.cache
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfo.cs
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.CoreCompileInputs.cache
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.dll
+C:\Workspace\ASP.NET\ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.pdb
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.deps.json
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.AssemblyReference.cache
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.Resources.ResourceVN.resources
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.GenerateResource.cache
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfoInputs.cache
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfo.cs
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.CoreCompileInputs.cache
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.dll
+C:\Workspace\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.pdb
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.deps.json
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.AssemblyReference.cache
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.Resources.ResourceVN.resources
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.GenerateResource.cache
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfoInputs.cache
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfo.cs
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.CoreCompileInputs.cache
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.dll
+F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.deps.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.AssemblyReference.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.Resources.ResourceVN.resources
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.GenerateResource.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfoInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.AssemblyInfo.cs
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.csproj.CoreCompileInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Core\obj\Debug\netcoreapp3.1\EddieShop.Core.pdb
