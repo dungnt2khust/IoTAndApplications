@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IoT</string>
+    <string name="title_home">Quét</string>
+    <string name="title_dashboard">Hiển Thị</string>
+    <string name="title_notifications">Thông tin</string>
+        <string name="login_form_title">Login</string>
+        <string name="login_form_username">Username</string>
+        <string name="login_form_password">Password</string>
+        <string name="login_form_login">LOGIN</string>
+</resources>
