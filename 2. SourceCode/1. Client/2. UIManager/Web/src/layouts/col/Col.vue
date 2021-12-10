@@ -46,7 +46,10 @@ export default {
    @include setCol(w);
    @include setCol(lg);
    
-   @media only screen and (max-width: 780px){
+   @media only screen and (max-width: 1024px){
        @include setCol(xs);
+   }
+   @media only screen and (max-width: 720px){
+       @include setCol(sm);
    }
 </style>

@@ -1,6 +1,10 @@
 <template>
   <div class="message-signalr">
-    <div class="message-signalr__main" style="width: 500px;" @keydown.enter="send">
+    <div
+      class="message-signalr__main"
+      style="width: 500px;"
+      @keydown.enter="send"
+    >
       <ul ref="listMessages" class="message-signalr__list hidden-scrollbar">
         <li
           class="message-signalr__item"
@@ -8,7 +12,7 @@
           :class="{
             'item--other':
               message.User.ConnectionID !=
-              $store.state.accountData.Data.ConnectionID
+              _getLocalStorage('AccountData').ConnectionID
           }"
           :key="index"
         >
@@ -18,7 +22,7 @@
       </ul>
       <div class="message-signalr__input">
         <div class="fx-row m-b-20">
-          <ed-row class="fx-row gut-m-2"> 
+          <ed-row class="fx-row gut-m-2">
             <ed-col :colW="12" class="gut-p-2">
               <ed-input
                 class="message-signalr_name"
@@ -33,32 +37,34 @@
       </div>
     </div>
     <BaseContentFrame class="m-l-30" width="400px" height="100%" bgColor="#ccc">
-      <div class="list-user defaultScrollbar">
-        <div
-          v-for="(user, index) in listUsers"
-          class="list-user__item fx-row aln-i-center jus-c-sbtn m-10 p-l-10"
-          :key="index"
-        >
-          <div class="fx-row flex-1">
-            <div class="list-user__code m-r-10">{{ user.Code }}</div>
-            <div class="list-user__name">{{ user.DisplayName }}</div>
+      <template v-slot:content>
+        <div class="list-user defaultScrollbar">
+          <div
+            v-for="(user, index) in listUsers"
+            class="list-user__item fx-row aln-i-center jus-c-sbtn m-10 p-l-10"
+            :key="index"
+          >
+            <div class="fx-row flex-1">
+              <div class="list-user__code m-r-10">{{ user.Code }}</div>
+              <div class="list-user__name">{{ user.DisplayName }}</div>
+            </div>
+            <div @click="checkUser(index)">
+              <div v-if="user.checked" class="mi-check cur-p m-10"></div>
+              <div v-else class="mi-uncheck cur-p m-10"></div>
+            </div>
           </div>
-          <div @click="checkUser(index)">
-            <div v-if="user.checked" class="mi-check cur-p m-10"></div>
-            <div v-else class="mi-uncheck cur-p m-10"></div>
+          <div v-if="!listUsers.length">
+            Không có user nào
           </div>
         </div>
-        <div v-if="!listUsers.length">
-          Không có user nào
-        </div>
-      </div>
+      </template>
     </BaseContentFrame>
   </div>
 </template>
 
 <script>
 // Library
-import UserAPI from "@/api/Components/User/User.js";
+import UserAPI from "@/api/components/User/UserAPI.js";
 
 export default {
   data() {
@@ -84,8 +90,11 @@ export default {
         .then(res => {
           var users = res.data.Data;
           users = users.filter(user => {
-            return user.UserID != this.$store.state.accountData.AccountId;
+            return (
+              user.UserID != this._getLocalStorageNotParse("AccountID")
+            );
           });
+          console.log(users)
           this.listUsers = users;
         })
         .catch(err => {
@@ -107,8 +116,12 @@ export default {
      * CreatedBy: NTDUNG (14/11/2021)
      */
     send() {
-      var userSent = this.$store.state.accountData.Data;
-      var userReceiveIDs = this.listUsers.filter(user => {return user.checked == true}).map(user => user.UserID);
+      var userSent = this._getLocalStorage("AccountData");
+      var userReceiveIDs = this.listUsers
+        .filter(user => {
+          return user.checked == true;
+        })
+        .map(user => user.UserID);
 
       if (userReceiveIDs.length)
         this.$SignalR
@@ -121,20 +134,23 @@ export default {
           .catch(error => {
             console.log(error);
           });
-      else 
-        alert("Bạn phải chọn một người dùng trước khi gửi !!!");
+      else alert("Bạn phải chọn một người dùng trước khi gửi !!!");
     },
     /**
      * Gửi tin nhắn đến Admin
      * CreatedBy: NTDUNG (14/11/2021)
      */
-    sendToAdmin() {}, 
+    sendToAdmin() {},
     /**
      * Chọn user
      * CreatedBy: NTDUNG (24/11/2021)
      */
     checkUser(index) {
-      this.$set(this.listUsers[index], 'checked', !this.listUsers[index].checked);
+      this.$set(
+        this.listUsers[index],
+        "checked",
+        !this.listUsers[index].checked
+      );
     }
   }
 };

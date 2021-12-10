@@ -1,6 +1,14 @@
 <template lang="">
   <div class="base-content-frame defaultScrollbar" :style="customizeStyle(styleCustom)">
-    <slot></slot>
+    <div class="frame__header">
+      <slot name="header"></slot>
+    </div>
+    <div class="frame__content" :class="{defaultScrollbar: autoScroll}">
+      <slot name="content"></slot>
+    </div>
+    <div class="frame__footer">
+      <slot name="footer"></slot>
+    </div>
   </div>
 </template>
 <script>
@@ -59,6 +67,14 @@ export default {
     border: {
       type: String,
       default: null
+    },
+    zIndex: {
+      type: Number,
+      default: null
+    },
+    autoScroll: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -76,7 +92,8 @@ export default {
         "bottom": this.bottom,
         "left": this.left,
         "right": this.right,
-        "border": this.border
+        "border": this.border,
+        "z-index": this.zIndex
       }
     };
   }

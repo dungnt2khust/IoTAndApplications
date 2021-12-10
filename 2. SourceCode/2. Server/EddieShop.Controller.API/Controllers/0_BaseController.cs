@@ -1,4 +1,5 @@
 ﻿using EddieShop.Core.Entities;
+using EddieShop.Core.Entities.Common;
 using EddieShop.Core.Interfaces.Base;
 using EddieShop.Core.Resources;
 using Microsoft.AspNetCore.Http;
@@ -25,22 +26,23 @@ namespace EddieShop.Controller.API.Controllers
             _baseService = baseService;
         }
         #endregion
-        
+
         #region Method
 
         #region GetAll
         /// <summary>
         /// Lấy danh sách
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
         [HttpGet]
-        public IActionResult GetAllEntities()
+        public IActionResult GetAllEntities(Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetAllEntities();
+                var serviceResult = _baseService.GetAllEntities(sessionID);
                 //4.Trả về kết quả cho client
                 if (serviceResult.Data != null)
                 {
@@ -72,15 +74,16 @@ namespace EddieShop.Controller.API.Controllers
         /// Lấy thông tin theo Id
         /// </summary>
         /// <param name="entityId">Id</param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
         [HttpGet("{entityId}")]
-        public IActionResult GetEntityById(Guid entityId)
+        public IActionResult GetEntityById(Guid entityId, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetEntityById(entityId);
+                var serviceResult = _baseService.GetEntityById(entityId, sessionID);
                 if (serviceResult.Data != null)
                 {
                     return StatusCode(200, serviceResult);
@@ -109,14 +112,15 @@ namespace EddieShop.Controller.API.Controllers
         /// Lấy thông tin theo Id
         /// </summary>
         /// <param name="columnsGet"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(23/11/2021)
-        [HttpPost("get-by-properties")]
-        public IActionResult GetByProperties(TEntity columnsGet)
+        [HttpPost("GetByProperties")]
+        public IActionResult GetByProperties(TEntity columnsGet, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetByValueColumns(columnsGet);
+                var serviceResult = _baseService.GetByValueColumns(columnsGet, sessionID);
                 if (serviceResult.Data != null)
                 {
                     return StatusCode(200, serviceResult);
@@ -145,14 +149,15 @@ namespace EddieShop.Controller.API.Controllers
         /// Lấy thông tin theo Id
         /// </summary>
         /// <param name="columnsGet"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(23/11/2021)
-        [HttpPost("get-by-value-columns")]
-        public IActionResult GetByValueColumns(TEntity columnsGet)
+        [HttpPost("GetByValueColumns")]
+        public IActionResult GetByValueColumns(TEntity columnsGet, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetByValueColumns(columnsGet);
+                var serviceResult = _baseService.GetByValueColumns(columnsGet, sessionID);
                 if (serviceResult.Data != null)
                 {
                     return StatusCode(200, serviceResult);
@@ -180,14 +185,15 @@ namespace EddieShop.Controller.API.Controllers
         /// Lấy theo id
         /// </summary>
         /// <param name="ids"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG (24/11/2021)
-        [HttpPost("get-by-ids")]
-        public IActionResult GetByIds(List<Guid> ids)
+        [HttpPost("GetByIds")]
+        public IActionResult GetByIds(List<Guid> ids, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetByIds(ids);
+                var serviceResult = _baseService.GetByIds(ids, sessionID);
                 if (serviceResult.Data != null)
                 {
                     return StatusCode(200, serviceResult);
@@ -215,16 +221,17 @@ namespace EddieShop.Controller.API.Controllers
         /// Thêm mới
         /// </summary>
         /// <param name="entity">Dữ liệu được thêm</param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
         [HttpPost]
-        public IActionResult Insert(TEntity entity)
+        public IActionResult Insert(TEntity entity, Guid? sessionID)
         {
             try
             {
                 //Trả về kết quả cho client
-                var serviceResult = _baseService.Insert(entity);
+                var serviceResult = _baseService.Insert(entity, sessionID);
                 if (serviceResult.Success)
                 {
                     return StatusCode(201, serviceResult);
@@ -257,15 +264,16 @@ namespace EddieShop.Controller.API.Controllers
         /// </summary>
         /// <param name="entityId">Id</param>
         /// <param name="entity">Thông tin muốn thay đổi</param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
         [HttpPut("{entityId}")]
-        public IActionResult Update(Guid entityId, TEntity entity)
+        public IActionResult Update(Guid entityId, TEntity entity, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.Update(entity, entityId);
+                var serviceResult = _baseService.Update(entity, entityId, sessionID);
                 if (serviceResult.Success)
                 {
 
@@ -286,7 +294,7 @@ namespace EddieShop.Controller.API.Controllers
                 errorObj.DevMsg = ex.Message;
                 errorObj.Code = "Eddie-001";
                 errorObj.MoreInfo = "https://openapi.Eddie.com.vn/errorcode/Eddie-001";
-                errorObj.TraceId = "ba9587fd-1a79-4ac5-a0ca-2c9f74dfd3fb"; 
+                errorObj.TraceId = "ba9587fd-1a79-4ac5-a0ca-2c9f74dfd3fb";
 
                 return StatusCode(500, errorObj);
             }
@@ -298,15 +306,16 @@ namespace EddieShop.Controller.API.Controllers
         /// Xóa theo Id
         /// </summary>
         /// <param name="entityId">Id </param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
         [HttpDelete("{entityId}")]
-        public IActionResult Delete(Guid entityId)
+        public IActionResult Delete(Guid entityId, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.Delete(entityId);
+                var serviceResult = _baseService.Delete(entityId, sessionID);
                 return Ok(serviceResult);
             }
             catch (Exception ex)
@@ -330,15 +339,16 @@ namespace EddieShop.Controller.API.Controllers
         /// Xóa nhiều
         /// </summary>
         /// <param name="entityIds">chuỗi chứa các Id</param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
         [HttpDelete]
-        public IActionResult DeleteMultiple([FromBody] List<Guid> entityIds)
+        public IActionResult DeleteMultiple([FromBody] List<Guid> entityIds, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.DeleteMultiple(entityIds);
+                var serviceResult = _baseService.DeleteMultiple(entityIds, sessionID);
                 return Ok(serviceResult);
             }
             catch (Exception ex)
@@ -361,14 +371,15 @@ namespace EddieShop.Controller.API.Controllers
         /// <summary>
         /// Lấy mã mới
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(07/10/2021)
         [HttpGet("NewCode")]
-        public IActionResult GetNewCode()
+        public IActionResult GetNewCode(Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetNewCode();
+                var serviceResult = _baseService.GetNewCode(sessionID);
                 return Ok(serviceResult);
             }
             catch (Exception ex)
@@ -395,14 +406,15 @@ namespace EddieShop.Controller.API.Controllers
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <param name="totalFields"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(28/10/2021)
         [HttpPost("Paging")]
-        public IActionResult GetFilterPaging(string filterString, int pageNumber, int pageSize,[FromBody] List<String> totalFields)
+        public IActionResult GetFilterPaging(string filterString, int pageNumber, int pageSize, [FromBody] FilterData filterData, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.GetFilterPaging(filterString, pageNumber, pageSize, totalFields);
+                var serviceResult = _baseService.GetFilterPaging(filterString, pageNumber, pageSize, filterData, sessionID);
                 //4.Trả về kết quả cho client
                 if (serviceResult.Data != null)
                 {
@@ -435,14 +447,15 @@ namespace EddieShop.Controller.API.Controllers
         /// </summary>
         /// <param name="entityId">Id</param>
         /// <param name="data">Thông tin muốn thay đổi</param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         [HttpPut("UpdateColumns/{entityId}")]
-        public IActionResult UpdateColumns(Guid entityId, UpdateColumns<TEntity> updateColumns)
+        public IActionResult UpdateColumns(Guid entityId, UpdateColumns<TEntity> updateColumns, Guid? sessionID)
         {
             try
             {
-                var serviceResult = _baseService.UpdateColumns(updateColumns.Entity, entityId, updateColumns.Columns);
+                var serviceResult = _baseService.UpdateColumns(updateColumns.Entity, entityId, updateColumns.Columns, sessionID);
                 if (serviceResult.Success)
                 {
 

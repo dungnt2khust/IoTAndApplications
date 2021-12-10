@@ -4,7 +4,8 @@ const routes = [
         name: "Login",
         component: () => import ("@/views/Authen/Login/Login.vue"),
         meta: {
-            Title: "i18nMenu.Authen.Login"
+            Title: "i18nMenu.Authen.Login",
+            permission: []
         }
     },
     {
@@ -12,7 +13,8 @@ const routes = [
         name: "Register",
         component: () => import ("@/views/Authen/Register/Register.vue"),
         meta: {
-            Title: "i18nMenu.Authen.Register"
+            Title: "i18nMenu.Authen.Register",
+            permission: []
         }
     },
     {
@@ -20,7 +22,8 @@ const routes = [
         name: "NoPermision",
         component: () => import ("@/views/Authen/NoPermission/NoPermission.vue"),
         meta: {
-            Title: "i18nMenu.Authen.NoPermission"
+            Title: "i18nMenu.Authen.NoPermission",
+            permission: []
         }
     },
     {
@@ -28,7 +31,8 @@ const routes = [
         name: "NotFound",
         component: () => import ("@/views/Authen/NotFound/NotFound.vue"),
         meta: {
-            Title: "i18nMenu.Authen.NotFound"
+            Title: "i18nMenu.Authen.NotFound",
+            permission: []
         }
     }
 ];

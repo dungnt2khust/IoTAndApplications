@@ -169,7 +169,13 @@
   <data name="Success_Insert" xml:space="preserve">
     <value>Thêm thành công</value>
   </data>
+  <data name="Success_Register" xml:space="preserve">
+    <value>Đăng ký tài khoản thành công.</value>
+  </data>
   <data name="Success_Update" xml:space="preserve">
     <value>Sửa thành công</value>
+  </data>
+  <data name="Username_Exists" xml:space="preserve">
+    <value>Tên đăng nhập đã tồn tại.</value>
   </data>
 </root>

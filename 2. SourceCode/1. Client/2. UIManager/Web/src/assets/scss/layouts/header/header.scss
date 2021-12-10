@@ -7,4 +7,7 @@ $color: #12007D;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }

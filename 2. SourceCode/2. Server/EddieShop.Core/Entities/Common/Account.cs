@@ -55,5 +55,10 @@ namespace EddieShop.Core.Entities
         /// ConnectionID
         /// </summary>
         public string ConnectionID { get; set; }
+        
+        /// <summary>
+        /// Ngôn ngữ
+        /// </summary>
+        public string Language { get; set; }
     }
 }

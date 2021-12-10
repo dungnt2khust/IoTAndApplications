@@ -1,19 +1,25 @@
 export default {
     methods: {
         _getLocalStorage(key) {
-            return localStorage.getItem(key);
+            return JSON.parse(localStorage.getItem(key));
         },
         _setLocalStorage(key, value) {
-            return localStorage.setItem(key, value);
+            localStorage.setItem(key, JSON.stringify(value));
+        },
+        _getLocalStorageNotParse(key) {
+            return localStorage.getItem(key);
+        },
+        _setLocalStorageNotStringify(key, value) {
+            localStorage.setItem(key, value);
         },
         _removeLocalStorage(key) {
-            return localStorage.removeItem(key);
+            localStorage.removeItem(key);
         },
         _getSessionStorage(key) {
-            return sessionStorage.getItem(key);
+            return JSON.parse(sessionStorage.getItem(key));
         },
         _setSessionStorage(key, value) {
-            return sessionStorage.setItem(key, value);
+            sessionStorage.setItem(key, JSON.stringify(value));
         }
     } 
 }

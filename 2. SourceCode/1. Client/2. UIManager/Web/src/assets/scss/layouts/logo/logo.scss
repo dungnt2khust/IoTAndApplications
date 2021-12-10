@@ -6,12 +6,13 @@ $color: rgba(255,255,255, 0.9);
     align-items: center;
     padding: 10px;
     font-size: 40px;
+    cursor: pointer;
     .logo__icon {
         margin-right: 10px;
         font-size: inherit;
     }
     .logo__shop-name {
-        font-family: Notosans-Bold;
+        font-family: SquidGame;
         letter-spacing: 2px; 
         font-size: inherit;
     }

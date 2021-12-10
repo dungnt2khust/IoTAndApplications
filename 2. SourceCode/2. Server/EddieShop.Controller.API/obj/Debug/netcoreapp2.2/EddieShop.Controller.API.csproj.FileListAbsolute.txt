@@ -1,0 +1,5 @@
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp2.2\EddieShop.Controller.API.csproj.AssemblyReference.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp2.2\EddieShop.Controller.API.GeneratedMSBuildEditorConfig.editorconfig
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp2.2\EddieShop.Controller.API.AssemblyInfoInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp2.2\EddieShop.Controller.API.AssemblyInfo.cs
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp2.2\EddieShop.Controller.API.csproj.CoreCompileInputs.cache

@@ -214,11 +214,29 @@ namespace EddieShop.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Đăng ký tài khoản thành công..
+        /// </summary>
+        public static string Success_Register {
+            get {
+                return ResourceManager.GetString("Success_Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sửa thành công.
         /// </summary>
         public static string Success_Update {
             get {
                 return ResourceManager.GetString("Success_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tên đăng nhập đã tồn tại..
+        /// </summary>
+        public static string Username_Exists {
+            get {
+                return ResourceManager.GetString("Username_Exists", resourceCulture);
             }
         }
     }

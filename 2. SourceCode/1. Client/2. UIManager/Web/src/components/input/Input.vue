@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       styleCustom: {
-        width: this.width
+        'width': this.width
       },
       showPassword: false,
       typeTemp: this.type

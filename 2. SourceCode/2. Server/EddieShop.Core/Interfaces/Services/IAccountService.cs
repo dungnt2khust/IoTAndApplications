@@ -23,5 +23,14 @@ namespace EddieShop.Core.Interfaces.Services
         /// <returns></returns>
         /// CreatedBy: NTDUNG (15/11/2021)
         ServiceResult checkSession(Guid? sessionID);
+
+        /// <summary>
+        /// Đăng kí tài khoản mới
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        /// CreatedBy: NTDUNG (30/11/2021)
+        /// ModifiedBy: NTDUNG (06/12/2021)
+        ServiceResult registerAccount(User user);
     }
 }

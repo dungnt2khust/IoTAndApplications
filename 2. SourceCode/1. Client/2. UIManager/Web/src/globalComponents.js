@@ -9,6 +9,12 @@ Vue.component('FullScreen', FullScreen);
 import Logo from '@/layouts/logo/Logo.vue'
 Vue.component('EdLogo', Logo);
 
+import GridProduct from '@/layouts/gridproduct/GridProduct.vue'
+Vue.component('EdGridProduct', GridProduct);
+
+import ListProduct from '@/layouts/listproduct/ListProduct.vue'
+Vue.component('EdListProduct', ListProduct);
+
 const BaseContentFrame = () => import('@/layouts/basecontentframe/BaseContentFrame.vue');
 Vue.component('BaseContentFrame', BaseContentFrame);
 
@@ -35,3 +41,18 @@ Vue.component('EdButton', Button);
 
 const Icon = () => import('@/components/icon/Icon.vue');
 Vue.component('EdIcon', Icon);
+
+const Blur = () => import('@/components/basecomponents/blur/Blur.vue');
+Vue.component('EdBlur', Blur);
+
+const INumber = () => import('@/components/number/Number.vue');
+Vue.component('EdNumber', INumber);
+
+const SelectBox = () => import('@/components/selectbox/selectbox.vue')
+Vue.component('EdSelectBox', SelectBox);
+
+const ListGrid = () => import('@/components/listgrid/ListGrid.vue');
+Vue.component('EdListGrid', ListGrid);
+
+const CheckBox = () => import('@/components/checkbox/CheckBox.vue');
+Vue.component('EdCheckBox', CheckBox);

@@ -1,4 +1,5 @@
 ﻿using EddieShop.Core.Entities;
+using EddieShop.Core.Entities.Common;
 using EddieShop.Core.Interfaces.Base;
 using System;
 using System.Collections.Generic;
@@ -30,15 +31,16 @@ namespace EddieShop.Core.Services
         /// <summary>
         /// Lấy toàn bộ dữ liệu
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <returns></returns>  
         /// CreatedBy: NTDUNG(27/8/2021)
         /// ModifiedBy: NTDUNG(27/8/2021)
-        public ServiceResult GetAllEntities()
+        public ServiceResult GetAllEntities(Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetAllEntities();
+                serviceResult.Data = _baseRepository.GetAllEntities(sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -54,16 +56,17 @@ namespace EddieShop.Core.Services
         /// <summary>
         /// Lấy thông tin theo Id
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <param name="entityId">Id đối tượng</param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(27/8/2021)
         /// ModifiedBy: NTDUNG(27/8/2021)
-        public virtual ServiceResult GetEntityById(Guid entityId)
+        public virtual ServiceResult GetEntityById(Guid entityId, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetEntityById(entityId);
+                serviceResult.Data = _baseRepository.GetEntityById(entityId, sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -79,14 +82,15 @@ namespace EddieShop.Core.Services
         /// <summary>
         /// Lấy dữ liệu theo thuộc tính
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG (23/11/2021)
-        public ServiceResult GetEntityByProperties(object columnsGet)
+        public ServiceResult GetEntityByProperties(object columnsGet, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetEntityByProperties(columnsGet);
+                serviceResult.Data = _baseRepository.GetEntityByProperties(columnsGet, sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -101,14 +105,15 @@ namespace EddieShop.Core.Services
         /// <summary>
         /// Lấy dữ liệu theo thuộc tính
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG (23/11/2021)
-        public ServiceResult GetByValueColumns(TEntity columnsGet)
+        public ServiceResult GetByValueColumns(TEntity columnsGet, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetByValueColumns(columnsGet);
+                serviceResult.Data = _baseRepository.GetByValueColumns(columnsGet, sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -124,14 +129,15 @@ namespace EddieShop.Core.Services
         /// Lấy theo các ids
         /// </summary>
         /// <param name="ids"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG (24/11/2021)
-        public ServiceResult GetByIds(List<Guid> ids)
+        public ServiceResult GetByIds(List<Guid> ids, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetByIds(ids);
+                serviceResult.Data = _baseRepository.GetByIds(ids, sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -141,23 +147,24 @@ namespace EddieShop.Core.Services
             }
         }
         #endregion
-        
+
         #region Insert
         /// <summary>
         /// Thêm mới
         /// </summary>
         /// <param name="entity">Thông tin được thêm</param>
+        /// <param name="sessionID"></param>
         /// <returns>số bản ghi được thêm</returns>
         /// CreatedBy: NTDUNG(27/8/2021)
         /// ModifiedBy: NTDUNG(27/8/2021)
-        public ServiceResult Insert(TEntity entity)
+        public ServiceResult Insert(TEntity entity, Guid? sessionID)
         {
             try
             {
                 //Validate dữ liệu
                 //Validate chung
                 List<string> emptyArr = new List<string>();
-                var serviceResult = ValidateData(entity, "ADD", emptyArr);
+                var serviceResult = ValidateData(entity, "ADD", emptyArr, sessionID);
                 if (!serviceResult.Success)
                 {
                     return serviceResult;
@@ -192,23 +199,24 @@ namespace EddieShop.Core.Services
         /// </summary>
         /// <param name="entity">Thông tin cần sửa</param>
         /// <param name="entityId">Id </param>
+        /// <param name="sessionID"></param>
         /// <returns>số bản ghi được sửa</returns>
         /// CreatedBy: NTDUNG(17/8/2021)
         /// ModifiedBy: NTDUNG(17/8/2021)
-        public ServiceResult Update(TEntity entity, Guid entityId)
+        public ServiceResult Update(TEntity entity, Guid entityId, Guid? sessionID)
         {
             try
             {
                 //Validate dữ liệu
                 //Validate chung
                 List<string> emptyArr = new List<string>();
-                var serviceResult = ValidateData(entity, "UPDATE", emptyArr);
+                var serviceResult = ValidateData(entity, "UPDATE", emptyArr, sessionID);
                 if (!serviceResult.Success)
                 {
                     return serviceResult;
                 }
                 //Thêm dữ liệu
-                var rowEffects = _baseRepository.Update(entity, entityId);
+                var rowEffects = _baseRepository.Update(entity, entityId, sessionID);
                 serviceResult.Data = new
                 {
                     rowEffects = rowEffects,
@@ -236,10 +244,11 @@ namespace EddieShop.Core.Services
         /// <param name="entity"></param>
         /// <param name="mode"></param>
         /// <param name="columns"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(07/10/2021)
         /// ModifiedBy: NTDUNG (14/11/2021)
-        public ServiceResult ValidateData(TEntity entity, string mode, List<string> columns)
+        public ServiceResult ValidateData(TEntity entity, string mode, List<string> columns, Guid? sessionID)
         {
             var serviceResult = new ServiceResult();
             var properties = entity.GetType().GetProperties();
@@ -273,7 +282,7 @@ namespace EddieShop.Core.Services
                 {
                     var fieldName = propEddieDislayName.Length > 0 ? (propEddieDislayName[0] as EddieDisplayName).FieldName : property.Name;
 
-                    var duplicate = _baseRepository.CheckDuplicate(entity, propName, mode);
+                    var duplicate = _baseRepository.CheckDuplicate(entity, propName, mode, sessionID);
                     if (duplicate)
                     {
                         serviceResult.Success = false;
@@ -292,15 +301,16 @@ namespace EddieShop.Core.Services
         /// Xóa theo Id
         /// </summary>
         /// <param name="entityId">Id </param>
+        /// <param name="sessionID"></param>
         /// <returns>Số bản ghi được xóa</returns>
         /// CreatedBy: NTDUNG(27/8/2021)
         /// ModifiedBy: NTDUNG(27/8/2021)
-        public ServiceResult Delete(Guid entityId)
+        public ServiceResult Delete(Guid entityId, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                var rowEffects = _baseRepository.Delete(entityId);
+                var rowEffects = _baseRepository.Delete(entityId, sessionID);
                 serviceResult.Data = new
                 {
                     rowEffects = rowEffects,
@@ -326,15 +336,16 @@ namespace EddieShop.Core.Services
         /// Xóa nhiều
         /// </summary>
         /// <param name="entityIds"> mảng chứa các Id</param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(27/8/2021)
         /// ModifiedBy: NTDUNG(27/8/2021)
-        public ServiceResult DeleteMultiple(List<Guid> entityIds)
+        public ServiceResult DeleteMultiple(List<Guid> entityIds, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                var rowEffects = _baseRepository.DeleteMultiple(entityIds);
+                var rowEffects = _baseRepository.DeleteMultiple(entityIds, sessionID);
                 serviceResult.Data = new
                 {
                     rowEffects = rowEffects,
@@ -358,14 +369,15 @@ namespace EddieShop.Core.Services
         /// <summary>
         /// Lấy mã mới
         /// </summary>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(07/10/2021)
-        public ServiceResult GetNewCode()
+        public ServiceResult GetNewCode(Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetNewCode();
+                serviceResult.Data = _baseRepository.GetNewCode(sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -382,15 +394,16 @@ namespace EddieShop.Core.Services
         /// <param name="filterString"></param>
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
-        /// <param name="totalFields"
+        /// <param name="totalFields"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG(28/10/2021)
-        public ServiceResult GetFilterPaging(string filterString, int pageNumber, int pageSize, List<String> totalFields)
+        public ServiceResult GetFilterPaging(string filterString, int pageNumber, int pageSize, FilterData filterData, Guid? sessionID)
         {
             try
             {
                 var serviceResult = new ServiceResult();
-                serviceResult.Data = _baseRepository.GetFilterPaging(filterString, pageNumber, pageSize, totalFields);
+                serviceResult.Data = _baseRepository.GetFilterPaging(filterString, pageNumber, pageSize, filterData, sessionID);
                 return serviceResult;
             }
             catch (Exception)
@@ -407,21 +420,22 @@ namespace EddieShop.Core.Services
         /// <param name="entity"></param>
         /// <param name="entityId"></param>
         /// <param name="columns"></param>
+        /// <param name="sessionID"></param>
         /// <returns></returns>
         /// CreatedBy: NTDUNG (14/11/2021)
-        public ServiceResult UpdateColumns(TEntity entity, Guid entityId, List<String> columns)
+        public ServiceResult UpdateColumns(TEntity entity, Guid entityId, List<String> columns, Guid? sessionID)
         {
             try
             {
                 //Validate dữ liệu
                 //Validate chung
-                var serviceResult = ValidateData(entity, "UPDATE", columns);
+                var serviceResult = ValidateData(entity, "UPDATE", columns, sessionID);
                 if (!serviceResult.Success)
                 {
                     return serviceResult;
                 }
                 //Thêm dữ liệu
-                var rowEffects = _baseRepository.UpdateColumns(entity, entityId, columns);
+                var rowEffects = _baseRepository.UpdateColumns(entity, entityId, columns, sessionID);
                 serviceResult.Data = new
                 {
                     rowEffects = rowEffects,

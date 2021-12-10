@@ -68,6 +68,36 @@ namespace EddieShop.Core.Services
             }
         }
         #endregion
+
+        #region RegisterAccount
+        /// <summary>
+        /// Đăng kí tài khoản mới
+        /// </summary>
+        /// <param name="account"></param>
+        /// <returns></returns>
+        /// CreatedBy: NTDUNG (30/11/2021)
+        public ServiceResult registerAccount(User user) {
+            try
+            {
+                var serviceResult = new ServiceResult();
+                serviceResult.Data = _accountRepository.registerAccount(user);
+                if (serviceResult.Data == null)
+                {
+                    serviceResult.Msg = ResourceVN.Username_Exists;
+                    serviceResult.Success = false;
+                } else
+                {
+                    serviceResult.Msg = ResourceVN.Success_Register;
+                    serviceResult.Success = true;
+                }
+                return serviceResult;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        #endregion
         #endregion
     }
 }

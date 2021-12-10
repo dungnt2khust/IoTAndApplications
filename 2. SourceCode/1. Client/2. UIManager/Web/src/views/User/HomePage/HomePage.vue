@@ -1,47 +1,39 @@
 <template lang="">
-  <div class="homepage">
-  </div>
+  <base-content-area class="jus-c-center" width="90%">
+    <template v-slot:content>
+      <div class="w-full">
+        <ed-grid-product :products="listProductHot" />
+      </div>
+    </template>
+  </base-content-area>
 </template>
 <script>
-
 export default {
-  name: "HomePage", 
+  name: "HomePage",
   data() {
     return {
-      products: []
+      listProductHot: []
     };
   },
   mounted() {
+    this.getGridProductHot();
   },
   methods: {
-    /**
-     * Lấy dữ liệu danh sách sản phẩm
-     * CreatedBy: NTDUNG (02/11/2021)
-     */
-    getListProduct() {
-      ProductAPI.getFilterPaging("", 1, 10)
-        .then(res => {
-          if (res && res.data && res.data.Success) {
-            this.products = res.data.Data.Records;
-            this.products = this.products.map(product => {
-              if (product.Image) {
-                var src = "data:image/gif;base64," + product.Image;
-                product.Image = {
-                  src: src,
-                  width: "100px",
-                  height: "100px"
-                };
-              }
-              return product;
-            });
-          }
-        })
-        .catch(res => {
-          console.log(res);
-        });
-    }, 
     login() {
-      this.$router.push('/login');
+      this.$router.push("/login");
+    },
+    /**
+     * Lấy danh sách sản phẩm
+     * CreatedBy: NTDUNG (01/12/2021)
+     */
+    getGridProductHot() {
+      this.getListProduct()
+        .then(res => {
+          this.listProductHot = res;
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   }
 };

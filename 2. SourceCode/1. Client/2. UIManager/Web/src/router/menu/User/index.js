@@ -6,11 +6,7 @@ var NavbarData = [
   {
     Title: "i18nMenu.Order",
     Path: "/order"
-  },
-  {
-    Title: "i18nMenu.Cart",
-    Path: "/cart"
-  },
+  }, 
   {
     Title: "i18nMenu.Messenger",
     Path: "/messenger"

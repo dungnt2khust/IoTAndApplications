@@ -10,10 +10,12 @@ class Account {
    */
   checkSession() {
     return BaseAPIConfig.post(
-      `${this.controller}/check-session?sessionID=${localStorage.getItem("Session")}`
-    )
+      `${this.controller}/check-session?sessionID=${localStorage.getItem(
+        "Session"
+      )}`
+    );
   }
-  
+
   /**
    * Kiểm tra tài khoản
    * @param {Object} account
@@ -22,9 +24,19 @@ class Account {
    */
   checkValidAccount(account) {
     return BaseAPIConfig.post(
-      `${this.controller}/check-valid-account`, account
+      `${this.controller}/check-valid-account`,
+      account
     );
-  } 
+  }
+
+  /**
+   * Đăng kí tài khoản
+   * @param {Object} account
+   * CreatedBy: NTDUNG (06/12/2021)
+   */
+  registerAccount(account) {
+    return BaseAPIConfig.post(`${this.controller}/register`, account);
+  }  
 }
 
 export default new Account();

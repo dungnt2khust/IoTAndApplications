@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zb1F8p58E+37NRi8t6sWdWXWoarN8LXsgwNGzZeiZ0ZzQDlV+QfKkrARpd5ODkuHPp0xYZiZFPUtcJP6ZsTxWw==",
+  "dgSpecHash": "xcEVc1pemW9LCbtr+SCb9kxg0gHcwOrdnnAn6mEcSFtz5fQVVIrKs8HrgWCT3zKKIvWkQeMY/TZ/uZ3o/PFtQg==",
   "success": true,
   "projectFilePath": "F:\\HUST\\20211\\Tài liệu 20211\\6. Iot và ứng dụng\\3. Project\\IoTAndApplications\\2. SourceCode\\2. Server\\EddieShop.Core\\EddieShop.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\NGUYEN TIEN DUNG\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\NGUYEN TIEN DUNG\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\NGUYEN TIEN DUNG\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -3,7 +3,18 @@
     height: 100%; 
     display: flex;
     min-height: 0;
+    .area-header {
+        display: flex;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+        .area-header__title {
+            font-size: 24px;
+            font-family: Notosans-Semibold;
+        }
+    }
     .area-content {
         flex: 1;
+        width: 100%;
+        min-height: 0;
     } 
 }

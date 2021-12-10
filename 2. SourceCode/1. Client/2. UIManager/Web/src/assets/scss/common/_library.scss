@@ -6,11 +6,29 @@
 .aln-i-center {
     align-items: center;
 }
+.aln-i-fend {
+    align-items: flex-end;
+}
+.aln-i-fstart {
+    align-items: flex-start;
+}
+.aln-i-base {
+    align-items: baseline;
+}
 .jus-c-center {
     justify-content: center;
 }
 .jus-c-sbtn {
     justify-content: space-between;
+}
+.jus-c-fend {
+    justify-content: flex-end;
+}
+.jus-c-fstart {
+    justify-content: flex-start;
+}
+.jus-c-base {
+    justify-content: baseline;
 }
 .fx-s-between {
     display: flex;
@@ -59,22 +77,67 @@
 .pos-absolute {
     position: absolute;
 }
+// Text
+@mixin setText($name, $family) {
+    .#{'txt-' + $name + '-0'} {
+        font-family: $family, sans-serif;
+        color: #fff;
+    }
+    .#{'txt-' + $name + '-1'} {
+        font-family: $family, sans-serif;
+        color: #000;
+    }
+    .#{'txt-' + $name + '-2'} {
+        font-family: $family, sans-serif;
+        color: rgb(255, 79, 9);
+    } 
+}
+@include setText(reg, Notosans-Regular);
+@include setText(smb, Notosans-Semibold);
+@include setText(b, Notosans-Bold);
+// Text size
+@for $size from 4 to 51 {
+    .#{'txt-s-' + $size} {
+        font-size: $size + px;
+    }
+} 
+// Text transform
+.txt-uppercase {
+    text-transform: uppercase;
+}
+.txt-lowercase {
+    text-transform: lowercase;
+}
+.txt-capitalize {
+    text-transform: capitalize;
+}
+.hov-act-d {
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        opacity: 1;
+    }
+}
 
 // Gutter
 @mixin setGutter () {
     @for $gut from 2 to 33 {
-        .#{'gut-m-'+ $gut} {
-            margin-left: -$gut + px;
-            margin-right: -$gut + px;
-        }   
-        .#{'gut-p-'+ $gut} {
-            padding-left: $gut + px;
-            padding-right: $gut + px;
-        }   
+        .#{'gut-'+ $gut} {
+            margin-left: -$gut + px !important;
+            margin-right: -$gut + px !important;
+            & > .row > .col {
+                padding-left: $gut + px !important;
+                padding-right: $gut + px !important;
+            }
+            & > .col {
+                padding-left: $gut + px !important;
+                padding-right: $gut + px !important;
+            }
+        }      
     } 
 }
 @include setGutter;
-
 
 // Icons
 @mixin setIcon {
@@ -92,7 +155,7 @@
 
 // Padding
 @mixin setPaddingAll {
-    @for $size from 2 to 50 {
+    @for $size from 2 to 101 {
         .#{'p-' +  $size} {
             padding: $size + px !important;
         }
@@ -122,7 +185,7 @@
 
 // Margin 
 @mixin setMarginAll {
-    @for $size from 2 to 50 {
+    @for $size from 2 to 101 {
         .#{'m-' +  $size} {
             margin: $size + px !important;
         }
@@ -149,6 +212,31 @@
     } 
 }
 @include setMarginAll;
+
+// Width & Height
+@mixin setSize {
+    .w-full {
+        width: 100%;
+    }
+    .h-full {
+        height: 100%;
+    }
+    @for $i from 0 to 13 {
+        $size: percentage(1 / 12 * $i);
+        .#{'w-' + $i} {
+            width: $size !important;
+        }
+        .#{'h-' + $i} {
+            height: $size !important;
+        }
+    }
+}
+@include setSize;
+
+// Display 
+.block {
+    display: block;
+}
 
 // Rotate
 @mixin setRotateAll {
@@ -214,14 +302,26 @@
 }
 // Cursor 
 .cur-n {
-    cursor: none;
+    cursor: none !important;
 }
 .cur-p {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 .cur-t {
-    cursor: text;
+    cursor: text !important;
 }
 .cur-g {
-    cursor: grab;
+    cursor: grab !important;
 }
+
+// Scale 
+@mixin setScale() {
+    @for $scale from 1 to 51 {
+        $residuals: $scale % 10;
+        $natural: ($scale - $residuals) / 10;
+        .#{'scale-' + $natural + '\\.' + $residuals} {
+            transform: scale($scale/10)
+        }
+    }
+}
+@include setScale;

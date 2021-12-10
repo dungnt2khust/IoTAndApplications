@@ -21,3 +21,8 @@ $svgSource1: url('~@/assets/svg/Sprites.6114dba8.svg');
 @include setIcon(mi-notify-white, $svgSource1, -257px, -88px, 22px, 25px);
 @include setIcon(mi-show, $svgSource1, -931px, -94px, 18px, 12px);
 @include setIcon(mi-hidden, $svgSource1, -987px, -92px, 18px, 16px);
+@include setIcon(mi-plus, $svgSource1, -34px, -314px, 12px, 12px);
+@include setIcon(mi-minus, $svgSource1, -129px, -415px, 13px, 2px);
+@include setIcon(mi-tick, $svgSource1, -899px, -316px, 11px, 8px);
+@include setIcon(mi-edit, $svgSource1, -416px, -312px, 16px, 16px);
+@include setIcon(mi-delete, $svgSource1, -464px, -313px, 15px, 15px);

@@ -1,21 +1,24 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Account from '@/models/model/Account/Account.js'
 import Guest from '@/router/menu/Guest'
+import app from '../main'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  state: {
-      accountData: {
-        AccountType: 0,
-        Data: Account.initData()
-      },
-      navBar: Guest
+  state: { 
+      navBar: Guest,
+      Language: 'vi'
   },
   mutations: {
-    setAccountData (accountData) {
-        state.accountData = accountData;
+    SET_LANG (state, payload) {
+      app.$i18n.locale = payload;
+      this.Language = payload;
+    }
+  },
+  actions: {
+    setLang({commit}, payload) {
+      commit('SET_LANG', payload);
     }
   }
 });

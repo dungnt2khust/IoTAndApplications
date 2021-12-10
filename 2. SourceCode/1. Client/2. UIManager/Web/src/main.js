@@ -49,4 +49,6 @@ router.afterEach(() => {
   app.contentLoading = false;
 });
 
+export default app;
+
 

@@ -75,28 +75,32 @@ namespace EddieShop.Controller.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger(c =>
             {
                 c.SerializeAsV2 = true;
             });
-
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-            // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "EddieShopAPI V1");
                 c.RoutePrefix = string.Empty;
             });
+            // Disable on production environment
             if (env.IsDevelopment())
             {
+                // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+                // specifying the Swagger JSON endpoint.
+                //app.UseSwaggerUI(c =>
+                //{
+                //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "EddieShopAPI V1");
+                //    c.RoutePrefix = string.Empty;
+                //});
                 app.UseDeveloperExceptionPage(); 
-            }
-            else
+            } else
             {
-                app.UseHsts(); 
+                app.UseHsts();
             }
+            
 
             //app.UseHttpsRedirection();
 
@@ -106,11 +110,11 @@ namespace EddieShop.Controller.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<SignalRHub>("/hub/chat");
+                endpoints.MapHub<SignalRHub>("/hub/signalr");
             });
             app.UseSignalR(routes =>
             {
-                routes.MapHub<SignalRHub>("/hub/chat");
+                routes.MapHub<SignalRHub>("/hub/signalr");
             });
         }
     }

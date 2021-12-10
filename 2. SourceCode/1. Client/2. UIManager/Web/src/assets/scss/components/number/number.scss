@@ -1,0 +1,47 @@
+$border: #ccc;
+$borderBold: #333;
+
+.number {
+    width: fit-content;
+    border: 1px solid $border;
+    &.disable {
+        opacity: 0.5;
+    }
+    .number__minus {
+        height: 30px;
+        cursor: pointer;
+
+        &.number--disable {
+            opacity: 0.4;
+        }
+    }
+
+    .number__value {
+        resize: horizontal;
+        min-width: 40px;
+        max-width: 60px;
+        outline: none;
+        text-align: center;
+        border-left: 1px solid $border;
+        border-right: 1px solid $border;
+
+        &:focus {
+            border: 1px solid $borderBold;
+        }
+
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    }
+
+    .number__plus {
+        height: 30px;
+        cursor: pointer;
+
+        &.number--disable {
+            opacity: 0.4;
+        }
+    }
+}

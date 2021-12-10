@@ -47,16 +47,16 @@ F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Infras
 F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.CopyComplete
 F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
 F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.deps.json
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.AssemblyReference.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.AssemblyInfoInputs.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.AssemblyInfo.cs
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.CoreCompileInputs.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.CopyComplete
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.AssemblyReference.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.AssemblyInfoInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.AssemblyInfo.cs
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.CoreCompileInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.deps.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Infrastructure\obj\Debug\netcoreapp3.1\EddieShop.Infrastructure.csproj.CopyComplete

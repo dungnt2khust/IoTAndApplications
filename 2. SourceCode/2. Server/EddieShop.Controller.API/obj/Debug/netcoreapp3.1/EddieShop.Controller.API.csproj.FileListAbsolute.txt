@@ -139,39 +139,39 @@ F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Contro
 F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.dll
 F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.pdb
 F:\ASP.NET\SignalR-ASP.NET-Core\SignalR ASP.NET Core Web API\BE\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.genruntimeconfig.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\appsettings.json
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.exe
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.deps.json
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.runtimeconfig.json
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.runtimeconfig.dev.json
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Dapper.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\MySqlConnector.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Npgsql.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.csproj.AssemblyReference.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.GeneratedMSBuildEditorConfig.editorconfig
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.AssemblyInfoInputs.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.AssemblyInfo.cs
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.csproj.CoreCompileInputs.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.MvcApplicationPartsAssemblyInfo.cs
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.MvcApplicationPartsAssemblyInfo.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\staticwebassets\EddieShop.Controller.API.StaticWebAssets.Manifest.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\staticwebassets\EddieShop.Controller.API.StaticWebAssets.xml
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\EddieShop.Controller.API.styles.css
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.RazorTargetAssemblyInfo.cache
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.csproj.CopyComplete
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.dll
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.pdb
-F:\HUST\20211\Tài liệu 20211\6. Iot và ứng dụng\3. Project\IoTAndApplications\2. SourceCode\2. Server\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.genruntimeconfig.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.csproj.AssemblyReference.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.GeneratedMSBuildEditorConfig.editorconfig
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.AssemblyInfoInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.AssemblyInfo.cs
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.csproj.CoreCompileInputs.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.MvcApplicationPartsAssemblyInfo.cs
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.MvcApplicationPartsAssemblyInfo.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\appsettings.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.exe
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.deps.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.runtimeconfig.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.runtimeconfig.dev.json
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Controller.API.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Dapper.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Npgsql.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Core.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.dll
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Core.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\bin\Debug\netcoreapp3.1\EddieShop.Infrastructure.pdb
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\staticwebassets\EddieShop.Controller.API.StaticWebAssets.Manifest.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\staticwebassets\EddieShop.Controller.API.StaticWebAssets.xml
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\EddieShop.Controller.API.styles.css
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.RazorTargetAssemblyInfo.cache
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.csproj.CopyComplete
+F:\HUST\20211\Tài liệu 20211\7. Project III - Thầy Trần Hải Anh\EddieShop\2. SourceCode\2. EddieShop.BackEnd\EddieShop.Controller.API\obj\Debug\netcoreapp3.1\EddieShop.Controller.API.genruntimeconfig.cache

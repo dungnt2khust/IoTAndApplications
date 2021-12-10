@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace EddieShop.Controller.API.Controllers
 {
-    public class ProductController : BaseController<Product>
-    {
-        #region Declare
-        IProductService _productService;
-        #endregion
-        public ProductController(IBaseService<Product> baseService, IProductService productService) : base(baseService)
-        {
-            _productService = productService;
-        }
-    }
+    //public class ProductController : BaseController<Product>
+    //{
+    //    #region Declare
+    //    IProductService _productService;
+    //    #endregion
+    //    public ProductController(IBaseService<Product> baseService, IProductService productService) : base(baseService)
+    //    {
+    //        _productService = productService;
+    //    }
+    //}
 }
