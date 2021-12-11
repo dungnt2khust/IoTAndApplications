@@ -1,11 +1,16 @@
 <template lang="">
     <div class="logo" :style="customizeStyle(styleCustom)" @click="handleClickLogo">
-        <div class="logo__icon">
-            <i class="fas fa-store"></i>
+        <div class="logo__icon m-r-10">
+            <!-- <i class="fas fa-store"></i> -->
+            <i class="fas fa-microchip"></i>
         </div>
         <span class="logo__shop-name">
             {{ShopName}}
         </span>
+        <div class="logo__icon m-l-10">
+            <!-- <i class="fas fa-store"></i> -->
+            <i class="fas fa-microchip"></i>
+        </div>
     </div>
 </template>
 <script>

@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="navbar__right fx-row aln-i-center cur-p">
-      <CartControls/>
+      <!-- <CartControls/> -->
       <NotifyControls class="m-r-10"/>
       <AccountControls/>
     </div>
@@ -23,14 +23,14 @@
 // Components
 import NotifyControls from "@/layouts/navbar/notifycontrols/NotifyControls.vue";
 import AccountControls from "@/layouts/navbar/accountcontrols/AccountControls.vue";
-import CartControls from "@/layouts/navbar/cartcontrols/CartControls.vue";
+// import CartControls from "@/layouts/navbar/cartcontrols/CartControls.vue";
 
 export default {
   name: "NavBar", 
   components: {
     NotifyControls,
     AccountControls,
-    CartControls
+    // CartControls
   },
   methods: {
     /**

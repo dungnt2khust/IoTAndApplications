@@ -4,6 +4,7 @@ export default {
     Messenger: "Messenger",
     Order: "Order",
     Product: "Product",
+    About: "About",
     User: {
         Home: "Home",
         Order: "Order",

@@ -11,40 +11,13 @@ const routes = [
     }
   },
   {
-    path: "/order",
-    name: "Order",
-    component: () => import("@/views/User/Order/Order.vue"),
+    path: "/about",
+    name: "About",
+    component: () => import("@/views/User/About/About.vue"),
     meta: {
-      Title: "i18nMenu.Order",
+      Title: "i18nMenu.About",
       permission: [AccountType.USER, AccountType.GUEST]
     }
-  },
-  {
-    path: "/cart",
-    name: "Cart",
-    component: () => import("@/views/User/Cart/Cart.vue"),
-    meta: {
-      Title: "i18nMenu.Cart",
-      permission: [AccountType.USER, AccountType.GUEST]
-    }
-  },
-  {
-    path: "/messenger",
-    name: "Messenger",
-    component: () => import("@/views/User/Messenger/Messenger.vue"),
-    meta: {
-      Title: "i18nMenu.Messenger",
-      permission: [AccountType.USER]
-    }
-  },
-  {
-    path: "/product-detail/:ProductID",
-    name: "ProductDetail",
-    component: () => import("@/views/User/Product/ProductDetail.vue"),
-    meta: {
-      Title: "i18nMenu.ProductDetail",
-      permission: [AccountType.USER, AccountType.GUEST]
-    }
-  }, 
+  }
 ]
 export default routes

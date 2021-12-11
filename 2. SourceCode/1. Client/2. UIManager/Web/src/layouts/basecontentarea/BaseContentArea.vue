@@ -12,7 +12,7 @@
           <slot name="header"></slot>
         </div>
       </div>
-      <div class="area-content fx-wrap p-10">
+      <div class="area-content p-10 w-full h-full box-sizing-b">
         <slot name="content"></slot>
       </div>
       <div class="area-footer">

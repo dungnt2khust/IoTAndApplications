@@ -5,6 +5,7 @@ export default {
     Order: "Đơn hàng",
     Product: "Sản phẩm",
     ProductDetail: "Chi tiết sản phẩm",
+    About: "Thông tin",
     User: {
         Home: "Trang chủ",
         Order: "Đơn hàng",

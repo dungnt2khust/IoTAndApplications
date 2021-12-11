@@ -24,13 +24,14 @@
     </ed-icon>
     <BaseContentFrame
       v-if="showNotify"
+      :zIndex="100"
       class="blurable pos-absolute p-10"
       tabindex="0"
       width="300px"
       height="400px"
       top="100%"
       right="0"
-      border="1px solid #ccc"
+      boxShadow="0px 0px 15px 10px rgba(162,228,76, 0.5)"
     >
       <template v-slot:content>
         <div class="list-notify defaultScrollbar">

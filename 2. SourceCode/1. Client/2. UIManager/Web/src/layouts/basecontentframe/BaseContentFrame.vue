@@ -1,9 +1,14 @@
 <template lang="">
   <div class="base-content-frame defaultScrollbar" :style="customizeStyle(styleCustom)">
-    <div class="frame__header">
-      <slot name="header"></slot>
-    </div>
-    <div class="frame__content" :class="{defaultScrollbar: autoScroll}">
+    <div v-if="title" class="area-header">
+        <div class="area-header__title">
+          {{ title }}
+        </div>
+        <div class="flex-1">
+          <slot name="header"></slot>
+        </div>
+      </div> 
+    <div class="frame__content box-sizing-b w-full h-full" :class="{defaultScrollbar: autoScroll}">
       <slot name="content"></slot>
     </div>
     <div class="frame__footer">
@@ -16,6 +21,10 @@
 export default {
   name: "BaseContentFrame",
   props: {
+    title: {
+      type: [Number, String],
+      default: null
+    },
     width: {
       type: String,
       default: null
@@ -69,12 +78,40 @@ export default {
       default: null
     },
     zIndex: {
-      type: Number,
+      type: [Number, String],
       default: null
     },
     autoScroll: {
       type: Boolean,
       default: true
+    },
+    pTop: {
+      type: [String, Number],
+      default: null
+    },
+    pBottom: {
+      type: [String, Number],
+      default: null
+    },
+    pRight: {
+      type: [String, Number],
+      default: null
+    },
+    pLeft: {
+      type: [String, Number],
+      default: null
+    },
+    pHor: {
+      type: [String, Number],
+      default: null
+    },
+    pVer: {
+      type: [String, Number],
+      default: null
+    },
+    boxShadow: {
+      type: String,
+      default: null
     }
   },
   data() {
@@ -93,7 +130,12 @@ export default {
         "left": this.left,
         "right": this.right,
         "border": this.border,
-        "z-index": this.zIndex
+        "z-index": this.zIndex,
+        "padding-top": this.pTop ? this.pTop : this.pVer,
+        "padding-bottom": this.pBottom ? this.pBottom : this.pVer,
+        "padding-right": this.pRight ? this.pRight : this.pHor,
+        "padding-left": this.pLeft ? this.pLeft : this.pHor,
+        "box-shadow": this.boxShadow
       }
     };
   }
