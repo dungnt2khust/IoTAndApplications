@@ -53,13 +53,18 @@ export default {
     disable: {
       type: Boolean,
       default: false
+    },
+    bgColor: {
+      type: String,
+      default: null
     }
   },
   data() {
     return {
       style: {
         width: this.width,
-        "text-align": this.txtPos
+        "text-align": this.txtPos,
+        "background-color": this.bgColor
       }
     };
   },

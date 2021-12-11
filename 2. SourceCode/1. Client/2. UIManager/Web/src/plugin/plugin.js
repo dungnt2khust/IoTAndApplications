@@ -20,4 +20,22 @@ Vue.prototype.$notify = Notify;
 Vue.prototype.$loading = Loading;
 Vue.prototype.$account = AccountAPI;
 
+
+// Chart
+import VueApexCharts from 'vue-apexcharts'
+Vue.use(VueApexCharts)
+Vue.component('apexchart', VueApexCharts)
+
+const BarChart = () => import('@/components/chart/BarChart.vue');
+Vue.component('EdBarChart', BarChart);
+
+const LineChart = () => import('@/components/chart/LineChart.vue');
+Vue.component('EdLineChart', LineChart);
+
+const AreaChart = () => import('@/components/chart/AreaChart.vue');
+Vue.component('EdAreaChart', AreaChart);
+
+const RadarChart = () => import('@/components/chart/RadarChart.vue');
+Vue.component('EdRadarChart', RadarChart);
+
 export default Vue;

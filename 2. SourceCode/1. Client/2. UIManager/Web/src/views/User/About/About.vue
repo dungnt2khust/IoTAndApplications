@@ -1,11 +1,11 @@
 <template lang="">
-    <div class="order">
-        Giỏ hàng 
+    <div class="about">
+        {{$t('i18nMenu.About')}}
     </div>
 </template>
 <script>
 export default {
-    name: "Order" 
+    name: "About" 
 }
 </script>
 <style lang="">

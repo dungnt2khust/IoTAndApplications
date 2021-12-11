@@ -13,6 +13,7 @@ const store = new Vuex.Store({
   mutations: {
     SET_LANG (state, payload) {
       app.$i18n.locale = payload;
+      document.title = app.$t(app.$route.meta.Title);
       this.Language = payload;
     }
   },

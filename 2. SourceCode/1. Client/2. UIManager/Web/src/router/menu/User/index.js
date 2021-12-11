@@ -4,12 +4,8 @@ var NavbarData = [
     Path: "/home"
   },
   {
-    Title: "i18nMenu.Order",
-    Path: "/order"
-  }, 
-  {
-    Title: "i18nMenu.Messenger",
-    Path: "/messenger"
+    Title: "i18nMenu.About",
+    Path: "/about"
   } 
 ];
 export default NavbarData;
