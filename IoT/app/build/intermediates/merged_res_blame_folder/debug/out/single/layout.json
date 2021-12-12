@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Android\\IoT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\Android\\IoT\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\Android\\IoT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "D:\\Android\\IoT\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "D:\\Android\\IoT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dashboard.xml",
+        "source": "D:\\Android\\IoT\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "D:\\Android\\IoT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\device_result.xml",
+        "source": "D:\\Android\\IoT\\app\\src\\main\\res\\layout\\device_result.xml"
+    },
+    {
+        "merged": "D:\\Android\\IoT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Android\\IoT\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

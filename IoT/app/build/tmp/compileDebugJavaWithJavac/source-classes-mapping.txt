@@ -1,0 +1,30 @@
+com/example/iot/ui/home/HomeViewModel.java
+ com.example.iot.ui.home.HomeViewModel
+com/example/iot/MainActivity.java
+ com.example.iot.MainActivity
+com/example/iot/ui/notifications/NotificationsViewModel.java
+ com.example.iot.ui.notifications.NotificationsViewModel
+com/example/iot/ui/home/HomeFragment.java
+ com.example.iot.ui.home.HomeFragment
+com/example/iot/databinding/FragmentNotificationsBinding.java
+ com.example.iot.databinding.FragmentNotificationsBinding
+com/example/iot/ui/dashboard/DashboardFragment.java
+ com.example.iot.ui.dashboard.DashboardFragment
+ com.example.iot.ui.dashboard.DashboardFragment$1
+com/example/iot/databinding/ActivityMainBinding.java
+ com.example.iot.databinding.ActivityMainBinding
+com/example/iot/ui/dashboard/DashboardViewModel.java
+ com.example.iot.ui.dashboard.DashboardViewModel
+com/example/iot/BuildConfig.java
+ com.example.iot.BuildConfig
+com/example/iot/databinding/FragmentDashboardBinding.java
+ com.example.iot.databinding.FragmentDashboardBinding
+com/example/iot/databinding/DeviceResultBinding.java
+ com.example.iot.databinding.DeviceResultBinding
+com/example/iot/databinding/FragmentHomeBinding.java
+ com.example.iot.databinding.FragmentHomeBinding
+com/example/iot/ui/notifications/NotificationsFragment.java
+ com.example.iot.ui.notifications.NotificationsFragment
+ com.example.iot.ui.notifications.NotificationsFragment$1
+ com.example.iot.ui.notifications.NotificationsFragment$1$1
+ com.example.iot.ui.notifications.NotificationsFragment$1$2
