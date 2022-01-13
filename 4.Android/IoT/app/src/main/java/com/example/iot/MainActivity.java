@@ -1,7 +1,11 @@
 package com.example.iot;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.example.iot.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +16,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.iot.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener{
 
     private ActivityMainBinding binding;
 
@@ -34,4 +38,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    @Override
+    public void onFragmentInteraction(String id) {
+        Log.d("MAINACTIVITY", "Change Fragment"+ id);
+    }
 }

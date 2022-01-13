@@ -1,5 +1,10 @@
 package com.example.iot.ui.notifications;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +26,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.iot.LoginActivity;
 import com.example.iot.R;
 import com.example.iot.databinding.FragmentNotificationsBinding;
 import com.example.iot.network.HttpsTrustManager;
@@ -40,42 +46,21 @@ public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
     private FragmentNotificationsBinding binding;
-    private Button loginBtn;
-    private EditText mUsername, mPassword;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        SharedPreferences editor = getContext().getSharedPreferences("USER_DATA", MODE_PRIVATE);
+        String sessionId = editor.getString("SessionID", null);
+        if(sessionId == null){
+            Intent intent = new Intent(getContext(), LoginActivity.class);
+            startActivity(intent);
+        }
+
         notificationsViewModel =
                 new ViewModelProvider(this).get(NotificationsViewModel.class);
 
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        loginBtn = binding.loginButton;
-        mUsername = binding.username;
-        mPassword = binding.password;
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String userName = mUsername.getText().toString();
-                String password = mPassword.getText().toString();
-                HttpsTrustManager.allowAllSSL();
-                String url = "https://iotandapp.eddieonthecode.xyz/api/v1/User";
-                RequestQueue queue = Volley.newRequestQueue(getContext());
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Log.d("MSG", response);
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("ERROR", error.toString());
-                    }
-                });
-
-                queue.add(stringRequest);
-            }
-        });
         return root;
     }
 

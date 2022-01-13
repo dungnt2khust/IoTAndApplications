@@ -7,4 +7,8 @@
         <string name="login_form_username">Username</string>
         <string name="login_form_password">Password</string>
         <string name="login_form_login">LOGIN</string>
+    <string name="devices">Bluetooth Devices</string>
+    <string name="button_connect">Connect</string>
+    <string name="button_disconnect">Disconnect</string>
+    <string name="user_session_id">Session</string>
 </resources>

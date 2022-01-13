@@ -1,7 +1,9 @@
 package com.example.iot.ui.home;
 
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,52 +26,36 @@ import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.iot.R;
 import com.example.iot.databinding.FragmentHomeBinding;
 import com.example.iot.device.DeviceItem;
+import com.example.iot.device.DeviceListAdapter;
+import com.example.iot.network.SerialListener;
+import com.example.iot.network.SerialSocket;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
+import java.util.UUID;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener, SerialListener {
 
     private static final int REQUEST_BLUETOOTH = 1;
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
-    private ListView listView;
+    private AbsListView mListView;
     private ToggleButton scanDeviceBtn;
-    BluetoothAdapter bTAdapter;
-    private Set<BluetoothDevice> pairedDevices;
-    ArrayList<DeviceItem>listDevices;
+    private BluetoothAdapter bTAdapter;
+    private ArrayList <DeviceItem>deviceItemList;
     private ArrayAdapter<DeviceItem> mAdapter;
-
-    private final BroadcastReceiver bReciever = new BroadcastReceiver() {
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
-                Log.d("DEVICELIST", "Bluetooth device found\n");
-                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                // Create a new device item
-                DeviceItem newDevice = new DeviceItem(device.getName(), device.getAddress(), "false");
-                // Add it to our adapter
-                boolean isContain = false;
-                for(DeviceItem dv : listDevices){
-                    if(dv.getAddress().equals(device.getAddress())){
-                        isContain = true;
-                        break;
-                    }
-                }
-                if(!isContain){
-                    mAdapter.add(newDevice);
-                    mAdapter.notifyDataSetChanged();
-                }
-            }
-        }
-    };
+    private OnFragmentInteractionListener mListener;
+    private SerialSocket serialSocket;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -76,57 +63,104 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        listView = binding.listItem;
+        mListView = binding.listItem;
         scanDeviceBtn = binding.Search;
         bTAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (!bTAdapter.isEnabled()) {
-            Intent enableBT = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBT, REQUEST_BLUETOOTH);
-        }
-        listDevices = new ArrayList<DeviceItem>();
-        mAdapter = new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1, listDevices);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("DEVICELIST", "onItemClick position: " + position +
-                        " id: " + id + " name: " + listDevices.get(position).getDeviceName() + " address: "+ listDevices.get(position).getAddress()+ "\n"  );
-            }
-        });
+        mListView.setOnItemClickListener(this);
+        deviceItemList = new ArrayList<DeviceItem>();
         scanDeviceBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
                 if(isChecked){
                     scanDevice();
-                    getActivity().registerReceiver(bReciever, filter);
-                    bTAdapter.startDiscovery();
                 }
                 else{
-                    getActivity().unregisterReceiver(bReciever);
-                    bTAdapter.cancelDiscovery();
+
                 }
             }
         });
         return root;
     }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
-
-    void scanDevice(){
-        pairedDevices = bTAdapter.getBondedDevices();
-        for(BluetoothDevice device : pairedDevices){
-            DeviceItem newDevice= new DeviceItem(device.getName(),device.getAddress(),"false");
-            listDevices.add(newDevice);
-        }
-        Toast.makeText(getContext(),"Showing Paired Devices",Toast.LENGTH_SHORT).show();
-        listView.setAdapter(mAdapter);
-    }
     void stopScan(){
     }
+    public void scanDevice(){
+        Set<BluetoothDevice> pairedDevices = bTAdapter.getBondedDevices();
+        if (pairedDevices.size() > 0) {
+            for (BluetoothDevice device : pairedDevices) {
+                DeviceItem newDevice= new DeviceItem(device.getName(),device.getAddress(),"false");
+                deviceItemList.add(newDevice);
+            }
+        }
+        mAdapter = new DeviceListAdapter(getActivity(), deviceItemList, bTAdapter);
+        mListView.setAdapter(mAdapter);
+    }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+        Log.d("DEVICELIST", "onItemClick position: " + position +
+                    " id: " + id + " name: " + deviceItemList.get(position).getDeviceName() + "\n");
+        BluetoothDevice bluetoothDevice = bTAdapter.getRemoteDevice(deviceItemList.get(position).getAddress());
+        serialSocket = new SerialSocket(getActivity().getApplicationContext(), bluetoothDevice);
+        try {
+            serialSocket.connect(this);
+            serialSocket.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (null != mListener) {
+            // Notify the active callbacks interface (the activity, if the
+            // fragment is attached to one) that an item has been selected.
+            mListener.onFragmentInteraction(deviceItemList.get(position).getDeviceName());
+        }
+
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (OnFragmentInteractionListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    @Override
+    public void onSerialConnect() {
+
+    }
+
+    @Override
+    public void onSerialConnectError(Exception e) {
+
+    }
+
+    @Override
+    public void onSerialRead(byte[] data) {
+
+    }
+
+    @Override
+    public void onSerialIoError(Exception e) {
+
+    }
+
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        public void onFragmentInteraction(String id);
+    }
 }
