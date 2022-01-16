@@ -9,13 +9,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed5c85db-713b-4c13-981c-1cf3220044b6" name="Default Changelist" comment="" />
+    <list default="true" id="ed5c85db-713b-4c13-981c-1cf3220044b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/java/com/example/iot/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/java/com/example/iot/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/java/com/example/iot/network/SerialSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/java/com/example/iot/network/SerialSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/java/com/example/iot/ui/home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/java/com/example/iot/ui/home/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/res/values/style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/res/values/style.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4.Android/IoT/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58R72L2D0B]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -29,7 +37,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="21ypKNxb4sVvrHPjBopns7D5yme" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android-custom-viewD:/AndroidSdk/sources/android-31/android/widget/CheckedTextView.java_SELECTED" value="CheckedTextView" />
     <property name="android-custom-viewD:/AndroidSdk/sources/android-31/android/widget/TextView.java_SELECTED" value="TextView" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RtpsServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../4.Android/IoT" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -111,5 +123,16 @@
       <updated>1638923116820</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

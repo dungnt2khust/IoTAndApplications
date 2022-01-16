@@ -40,6 +40,7 @@ import com.example.iot.network.SerialListener;
 import com.example.iot.network.SerialSocket;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
@@ -47,6 +48,7 @@ import java.util.UUID;
 public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener, SerialListener {
 
     private static final int REQUEST_BLUETOOTH = 1;
+    private static final String DELIMITER = "\r\n";
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
     private AbsListView mListView;
@@ -56,6 +58,7 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
     private ArrayAdapter<DeviceItem> mAdapter;
     private OnFragmentInteractionListener mListener;
     private SerialSocket serialSocket;
+    int pulseSensorData = 0;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -151,7 +154,22 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
 
     @Override
     public void onSerialRead(byte[] data) {
-
+        String msg = new String(data);
+        String intArray[];
+        intArray = msg.split("\r\n");
+        int sum = 0;
+        int count = intArray.length;
+        for(int i = 0; i< intArray.length; i++){
+            int element = Integer.parseInt(intArray[i]);
+            if(element > 0){
+                sum += element;
+            }
+            else count = count - 1;
+        }
+        if(sum > 0 && count > 0){
+            pulseSensorData = (int)sum / count;
+            Log.d("data", String.valueOf(pulseSensorData));
+        }
     }
 
     @Override

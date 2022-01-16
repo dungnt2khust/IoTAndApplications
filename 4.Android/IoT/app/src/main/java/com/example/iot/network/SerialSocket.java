@@ -52,6 +52,7 @@ public class SerialSocket implements Runnable {
      * connect-success and most connect-errors are returned asynchronously to listener
      */
     public void connect(SerialListener listener) throws IOException {
+        Log.d("alo2","tét");
         this.listener = listener;
         context.registerReceiver(disconnectBroadcastReceiver, new IntentFilter(INTENT_ACTION_DISCONNECT));
         Executors.newSingleThreadExecutor().submit(this);
@@ -84,9 +85,11 @@ public class SerialSocket implements Runnable {
         try {
             socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
             socket.connect();
+            Log.d("alo2","tét");
             if(listener != null)
                 listener.onSerialConnect();
         } catch (Exception e) {
+            Log.d("alo3","tét");
             if(listener != null)
                 listener.onSerialConnectError(e);
             try {
@@ -98,6 +101,7 @@ public class SerialSocket implements Runnable {
         }
         connected = true;
         try {
+            Log.d("connected","sdsd");
             byte[] buffer = new byte[1024];
             int len;
             //noinspection InfiniteLoopStatement
@@ -109,6 +113,7 @@ public class SerialSocket implements Runnable {
                     listener.onSerialRead(data);
             }
         } catch (Exception e) {
+            Log.d("alo4","tét");
             connected = false;
             if (listener != null)
                 listener.onSerialIoError(e);
