@@ -50,7 +50,7 @@ public class NotificationsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SharedPreferences editor = getContext().getSharedPreferences("USER_DATA", MODE_PRIVATE);
-        String sessionId = editor.getString("SessionID", null);
+        String sessionId = editor.getString("UserId", null);
         if(sessionId == null){
             Intent intent = new Intent(getContext(), LoginActivity.class);
             startActivity(intent);

@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
+    <ToggleButton
+        android:id="@+id/sendbtn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="564dp"
+        android:textOff="Stop"
+        android:textOn="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="match_parent"

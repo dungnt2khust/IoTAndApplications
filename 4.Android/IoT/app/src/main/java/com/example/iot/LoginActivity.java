@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 Log.d("TAG", jsonArray.toString());
                 String mRequestBody = jsonArray.toString();
-                String url = "https://eddieonthecode.xyz/api/v1/Account/check-valid-account"; ;
+                String url = "https://iotandapp.eddieonthecode.xyz/api/v1/Account/check-valid-account"; ;
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
@@ -63,8 +63,10 @@ public class LoginActivity extends AppCompatActivity {
                                     String data2 = new JSONObject(data).getString("Data");
                                     JSONObject userInfo = new JSONObject(data2);
                                     String seessionId = userInfo.getString("SessionID");
+                                    String userId = userInfo.getString("UserID");
                                     SharedPreferences.Editor editor = getSharedPreferences("USER_DATA", MODE_PRIVATE).edit();
                                     editor.putString("SessionID", seessionId);
+                                    editor.putString("UserId", userId);
                                     editor.apply();
                                 } catch (JSONException e) {
                                     e.printStackTrace();
