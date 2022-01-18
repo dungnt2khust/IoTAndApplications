@@ -1,5 +1,7 @@
 package com.example.iot.ui.home;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -8,6 +10,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,14 +35,26 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.iot.R;
 import com.example.iot.databinding.FragmentHomeBinding;
 import com.example.iot.device.DeviceItem;
 import com.example.iot.device.DeviceListAdapter;
+import com.example.iot.network.HttpsTrustManager;
 import com.example.iot.network.SerialListener;
 import com.example.iot.network.SerialSocket;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Set;
@@ -58,6 +73,7 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
     private ArrayAdapter<DeviceItem> mAdapter;
     private OnFragmentInteractionListener mListener;
     private SerialSocket serialSocket;
+    private TextView pluse;
     int pulseSensorData = 0;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -68,6 +84,7 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
         View root = binding.getRoot();
         mListView = binding.listItem;
         scanDeviceBtn = binding.Search;
+        pluse = binding.pluse;
         bTAdapter = BluetoothAdapter.getDefaultAdapter();
         mListView.setOnItemClickListener(this);
         deviceItemList = new ArrayList<DeviceItem>();
@@ -83,7 +100,10 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
                 }
             }
         });
+
+        HttpsTrustManager.allowAllSSL();
         return root;
+
     }
     @Override
     public void onDestroyView() {
@@ -170,6 +190,8 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
             pulseSensorData = (int)sum / count;
             Log.d("data", String.valueOf(pulseSensorData));
         }
+        pluse.setText(Integer.toString(pulseSensorData));
+        sendPluse(pulseSensorData);
     }
 
     @Override
@@ -180,5 +202,48 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(String id);
+    }
+
+    void sendPluse(int pluse){
+        SharedPreferences editor = getContext().getSharedPreferences("USER_DATA", MODE_PRIVATE);
+        String sessionId = editor.getString("UserId", null);
+        JSONObject jsonArray = new JSONObject();
+        try {
+            jsonArray.put("UserID",sessionId);
+            jsonArray.put("HeartBeat", pluse);
+            jsonArray.put("CreatedBy", "Hải Dương 3724");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        String mRequestBody = jsonArray.toString();
+        String url = "https://iotandapp.eddieonthecode.xyz/api/v1/Meansure"; ;
+        RequestQueue queue = Volley.newRequestQueue(getContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("add", response);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("ERROR", error.toString());
+            }
+        }){
+            @Override
+            public byte[] getBody() throws AuthFailureError {
+                try {
+                    return mRequestBody == null ? null : mRequestBody.getBytes("utf-8");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                    return null;
+                }
+            }
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+        };
+        queue.add(stringRequest);
     }
 }
