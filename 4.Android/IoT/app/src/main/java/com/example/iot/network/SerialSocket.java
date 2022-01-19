@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.iot.BuildConfig;
 
@@ -83,7 +84,7 @@ public class SerialSocket implements Runnable {
     @Override
     public void run() { // connect & read
         try {
-            socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
+            socket = device.createInsecureRfcommSocketToServiceRecord(BLUETOOTH_SPP);
             socket.connect();
             Log.d("alo2","tét");
             if(listener != null)

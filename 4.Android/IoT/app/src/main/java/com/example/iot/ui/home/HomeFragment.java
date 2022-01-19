@@ -7,11 +7,14 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +51,7 @@ import com.example.iot.device.DeviceItem;
 import com.example.iot.device.DeviceListAdapter;
 import com.example.iot.network.HttpsTrustManager;
 import com.example.iot.network.SerialListener;
+import com.example.iot.network.SerialService;
 import com.example.iot.network.SerialSocket;
 
 import org.json.JSONException;
@@ -60,7 +64,7 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
 
-public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener, SerialListener {
+public class HomeFragment extends Fragment implements AbsListView.OnItemClickListener, SerialListener, ServiceConnection {
 
     private static final int REQUEST_BLUETOOTH = 1;
     private static final String DELIMITER = "\r\n";
@@ -74,6 +78,9 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
     private OnFragmentInteractionListener mListener;
     private SerialSocket serialSocket;
     private TextView pluse;
+    private SerialService service;
+    private boolean initialStart = true;
+    private String deviceAddress;
     int pulseSensorData = 0;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -100,7 +107,6 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
                 }
             }
         });
-
         HttpsTrustManager.allowAllSSL();
         return root;
 
@@ -126,23 +132,21 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        Log.d("DEVICELIST", "onItemClick position: " + position +
-                    " id: " + id + " name: " + deviceItemList.get(position).getDeviceName() + "\n");
-        BluetoothDevice bluetoothDevice = bTAdapter.getRemoteDevice(deviceItemList.get(position).getAddress());
-        serialSocket = new SerialSocket(getActivity().getApplicationContext(), bluetoothDevice);
-        try {
-            serialSocket.connect(this);
-            serialSocket.run();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(initialStart) {
+            deviceAddress = deviceItemList.get(position).getAddress();
+            getActivity().bindService(new Intent(getActivity(), SerialSocket.class), this, Context.BIND_AUTO_CREATE);
+            try {
+                serialSocket.connect(this);
+                serialSocket.run();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if (null != mListener) {
+                // Notify the active callbacks interface (the activity, if the
+                // fragment is attached to one) that an item has been selected.
+                mListener.onFragmentInteraction(deviceItemList.get(position).getDeviceName());
+            }
         }
-        if (null != mListener) {
-            // Notify the active callbacks interface (the activity, if the
-            // fragment is attached to one) that an item has been selected.
-            mListener.onFragmentInteraction(deviceItemList.get(position).getDeviceName());
-        }
-
     }
 
     @Override
@@ -199,6 +203,21 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
 
     }
 
+    @Override
+    public void onServiceConnected(ComponentName name, IBinder binder) {
+        service = ((SerialService.SerialBinder) binder).getService();
+        service.attach(this);
+        if(initialStart && isResumed()) {
+            initialStart = false;
+            getActivity().runOnUiThread(this::connect);
+        }
+    }
+
+    @Override
+    public void onServiceDisconnected(ComponentName name) {
+
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(String id);
@@ -245,5 +264,15 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
             }
         };
         queue.add(stringRequest);
+    }
+    private void connect() {
+        try {
+            BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+            BluetoothDevice device = bluetoothAdapter.getRemoteDevice(deviceAddress);
+            SerialSocket socket = new SerialSocket(getActivity().getApplicationContext(), device);
+            service.connect(socket);
+        } catch (Exception e) {
+            onSerialConnectError(e);
+        }
     }
 }
