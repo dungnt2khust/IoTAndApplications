@@ -1,6 +1,7 @@
 package com.example.iot.network;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
@@ -8,10 +9,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.iot.BuildConfig;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.security.InvalidParameterException;
 import java.util.Arrays;
 import java.util.UUID;
@@ -85,11 +88,27 @@ public class SerialSocket implements Runnable {
         try {
             socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
             socket.connect();
-            Log.d("alo2","tét");
             if(listener != null)
                 listener.onSerialConnect();
         } catch (Exception e) {
-            Log.d("alo3","tét");
+            Log.e("","trying fallback...");
+            try {
+                socket =(BluetoothSocket) device.getClass().getMethod("createRfcommSocket", new Class[] {int.class}).invoke(device,1);
+                Toast.makeText(context.getApplicationContext(),
+                        "Connect bluetooth try again 1", Toast.LENGTH_LONG).show();
+                socket.connect();
+            } catch (IOException | NoSuchMethodException ioException) {
+                ioException.printStackTrace();
+            } catch (IllegalAccessException illegalAccessException) {
+                illegalAccessException.printStackTrace();
+            } catch (InvocationTargetException invocationTargetException) {
+                invocationTargetException.printStackTrace();
+            }
+
+            Log.e("","Connected");
+            e.printStackTrace();
+            Toast.makeText(context.getApplicationContext(),
+                    "Connect bluetooth fail", Toast.LENGTH_LONG).show();
             if(listener != null)
                 listener.onSerialConnectError(e);
             try {
@@ -100,6 +119,8 @@ public class SerialSocket implements Runnable {
             return;
         }
         connected = true;
+        Toast.makeText(context.getApplicationContext(),
+                "Connect bluetooth successfully", Toast.LENGTH_LONG).show();
         try {
             Log.d("connected","sdsd");
             byte[] buffer = new byte[1024];
@@ -113,7 +134,9 @@ public class SerialSocket implements Runnable {
                     listener.onSerialRead(data);
             }
         } catch (Exception e) {
-            Log.d("alo4","tét");
+            e.printStackTrace();
+            Toast.makeText(context.getApplicationContext(),
+                    "Connect bluetooth fail", Toast.LENGTH_LONG).show();
             connected = false;
             if (listener != null)
                 listener.onSerialIoError(e);
