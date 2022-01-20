@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
                 HttpsTrustManager.allowAllSSL();
                 JSONObject jsonArray = new JSONObject();
                 try {
-                    jsonArray.put("Name","username0001");
-                    jsonArray.put("Password", "12345678@User");
+                    jsonArray.put("Name",userName);
+                    jsonArray.put("Password", password);
                     jsonArray.put("Language", "VietNamese");
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -68,7 +69,11 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.putString("SessionID", seessionId);
                                     editor.putString("UserId", userId);
                                     editor.apply();
+                                    Toast.makeText(getApplicationContext(), "Login Successfull",
+                                            Toast.LENGTH_SHORT).show();
+                                    finish();
                                 } catch (JSONException e) {
+                                    Toast.makeText(getApplicationContext(), "Login Fail", Toast.LENGTH_SHORT).show();
                                     e.printStackTrace();
                                 }
                             }

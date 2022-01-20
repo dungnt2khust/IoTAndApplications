@@ -162,12 +162,16 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
 
     @Override
     public void onSerialConnect() {
-
+        Toast.makeText(getContext().getApplicationContext(), "Connect Successfull",
+                Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onSerialConnectError(Exception e) {
-
+        Toast.makeText(getContext(), "Connect fail", Toast.LENGTH_SHORT).show();
+        getActivity().stopService(new Intent(getActivity(), SerialService.class));
+        service = null;
+        initialStart = true;
     }
 
     @Override

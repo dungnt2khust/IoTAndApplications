@@ -100,6 +100,7 @@ public class SerialSocket implements Runnable {
             socket = null;
             return;
         }
+
         connected = true;
         try {
             Log.d("connected","sdsd");
