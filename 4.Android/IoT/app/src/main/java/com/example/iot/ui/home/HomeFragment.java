@@ -134,13 +134,7 @@ public class HomeFragment extends Fragment implements AbsListView.OnItemClickLis
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if(initialStart) {
             deviceAddress = deviceItemList.get(position).getAddress();
-            getActivity().bindService(new Intent(getActivity(), SerialSocket.class), this, Context.BIND_AUTO_CREATE);
-            try {
-                serialSocket.connect(this);
-                serialSocket.run();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            getActivity().bindService(new Intent(getActivity(), SerialService.class), this, Context.BIND_AUTO_CREATE);
             if (null != mListener) {
                 // Notify the active callbacks interface (the activity, if the
                 // fragment is attached to one) that an item has been selected.
